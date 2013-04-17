@@ -55,6 +55,9 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+  
+  " try to detect filetypes'
+  filetype on 
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -94,3 +97,37 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+"
+" Editor enhancements
+"
+
+" map window navigate keys
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+
+"
+" Python related vim ehancements
+"
+
+" tabs should take 4 spaces
+set tabstop=4
+
+" controls depth of autoindentation
+set shiftwidth=4
+
+" converts all tabs to spaces
+set expandtab
+
+au FileType python set autoindent
+au FileType python set smartindent
+au FileType python set textwidth=78
+
+" easier to organise code and hide portions I'm not interested in
+set foldmethod=indent
+set foldlevel=99
+
+let g:pep8_map='<leader>8'
