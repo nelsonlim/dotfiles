@@ -15,6 +15,11 @@ if has('mouse')
     set mouse=a
 endif
 
+" Disable swap files and backups
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Remap the <Leader> key from \ to ,
 let mapleader = ","
 
