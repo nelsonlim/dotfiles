@@ -10,3 +10,8 @@ alias u='cd ..'
 alias uu='cd ../..'
 alias uuu='cd ../../..'
 alias uuuu='cd ../../../..'
+
+# program aliases
+alias v='vim'
+alias gv='vim -g'
+
