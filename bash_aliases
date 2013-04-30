@@ -15,3 +15,5 @@ alias uuuu='cd ../../../..'
 alias v='vim'
 alias gv='vim -g'
 
+# remove firefox locks
+alias rmlocks="rm -fv ~/.mozilla/firefox/*.default/lock"
